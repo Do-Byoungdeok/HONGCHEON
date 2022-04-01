@@ -1,0 +1,15 @@
+/* reset */
+@import "reset.css";
+
+/* header */
+@import "header.css";
+
+/* index */
+@import "index.css";
+
+/* footer */
+@import "footer.css";
+
+/* responesive */
+@import "responsive.css";
+

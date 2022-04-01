@@ -1,0 +1,621 @@
+/* font */
+@font-face {
+    font-family: "NanumSquare";
+    font-weight: 900;
+    src:url(../font/NanumSquareEB.woff) format("woff");
+}
+@font-face {
+    font-family: "NanumSquare";
+    font-weight: 500;
+    src:url(../font/NanumSquareB.woff) format("woff");
+}
+@font-face {
+    font-family: "NanumSquare";
+    font-weight: 300;
+    src:url(../font/NanumSquareR.woff) format("woff");
+}
+@font-face {
+    font-family: "NanumSquare";
+    font-weight: 100;
+    src: url(../font/NanumSquareL.woff) format("woff");
+}
+
+
+.innerBox{
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.container{
+    overflow: hidden;
+
+    .mainBanner{
+        position: relative;
+        height: 100%;
+        top: 0;
+        .innerBox{
+            max-width: 100%;
+            margin: 0 auto;
+            position: relative;
+            .banner{
+                .item{
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                    &:nth-child(1){
+                        position: relative;
+                        opacity: 1;
+                    }
+                    &:nth-child(2){
+                        opacity: 0;
+                    }
+                    &:nth-child(3){
+                        opacity: 0;
+                    }
+                    .textBox{
+                        position: absolute;
+                        z-index: 1;
+                        text-align: center;
+                        top: 45%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        .bar{
+                            width: 1px;
+                            height: 100px;
+                            background: #fff;
+                            margin: 0 auto 30px;
+                        }
+                        .txt1{
+                            color: #eee;
+                            font-size: 35px;
+                            font-weight: 900;
+                        }
+                        .txt2{
+                            color: #eee;
+                            font-size: 40px;
+                            font-weight: 500;
+                        }
+                    }
+                    .imgBox{
+                        position: relative;
+                        width: 100%;
+                        >div{
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            bottom: 0;
+                            right: 0;
+                            background: rgba(0, 0, 0, 0.2);
+                        }
+                        img{
+                            width: 100%;
+                            transition: all 1s;
+                        }
+                    }
+                }
+                .item3{
+                    .textBox{
+                        .txt2{
+                            width: 120%;
+                            margin-left: -60px;
+                        }
+                    }
+                }
+            }
+            .control{
+                .arrow{
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 0;
+                    &:nth-child(1){
+                        left: 0;
+                    }
+                    .arrowPrev{
+                        background: url(../img/banner_arrow_prev.png);
+                        width: 18px;
+                        height: 31px;
+                        display: inline-block;
+                    }
+                    .arrowNext{
+                        background: url(../img/banner_arrow_next.png);
+                        width: 18px;
+                        height: 31px;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+
+    .content1{
+        width: 100%;
+        .innerBox{
+            
+            .HBox{
+                max-width: 1260px;
+                margin-right: auto;
+                margin-left: auto;
+                text-align: center;
+                padding-top: 100px;
+                padding-bottom: 60px;
+                .Ttxt{
+                    font-size: 40px;
+                    font-weight: 900;
+                    color: #111;
+                }
+                .Stxt{
+                    font-size: 25px;
+                    color: #111;
+                }
+                .listBox{
+                    width: 100%;
+                    height: 367px;
+                    overflow: hidden;
+                    margin: 60px auto;
+                    display: flex;
+
+                    a{
+                        position: relative;
+                        width: 25%;
+                        height: 367px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        padding: 20px;
+                        
+                        .contxt1{
+                            position: relative;
+                            text-align: center;
+
+                            .contxt_icon1{
+                                background-image: url(../img/content_icon_1.png);
+                                width: 79px;
+                                height: 80px;
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                margin: auto;
+                            }
+                            .contxt_icon2{
+                                background-image: url(../img/content_icon_2.png);
+                                width: 79px;
+                                height: 80px;
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                margin: auto;
+                            }
+                            .contxt_icon3{
+                                background-image: url(../img/content_icon_3.png);
+                                width: 79px;
+                                height: 80px;
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                margin: auto;
+                            }
+                            .contxt_icon4{
+                                background-image: url(../img/content_icon_4.png);
+                                width: 80px;
+                                height: 80px;
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                margin: auto;
+                            }
+
+                            p{
+                                font-size: 26px;
+                                font-weight: 900;
+                                line-height: 39px;
+                                margin-top: 50px;
+                            }
+
+                        }
+                        .contxt2{
+                            //hover하면 opacity 1
+                            text-align: center;
+                            margin-top: 50px;
+                            opacity: 0;
+                            line-height: 1.6em;
+                            font-size: 19px;
+                            height: 4.8em;
+                            font-weight: 500;
+                        }
+                        &:hover{
+                            background: #364497;
+                            transition: .7s;
+                            .contxt1{
+                                p{
+                                    color: #fff;
+                                }
+                                .contxt_icon{
+                                    filter: brightness(0) invert(1);
+                                }
+                            }
+                            .contxt2{
+                                opacity: 1;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .content2{
+        width: 100%;
+        overflow: visible;
+        .innerBox{
+            width: 100%;
+            position: relative;
+            padding-bottom: 900px;
+            padding-top: 60px;
+            .textBox{
+                max-width: 1260px;
+                margin-right: auto;
+                margin-left: auto;
+                text-align: center;
+                padding-bottom: 60px;
+                .mText{
+                    font-size: 40px;
+                    color: #111;
+                    font-weight: 900;
+                }
+                .sText{
+                    margin: 20px 0 0;
+                    font-size: 25px;
+                    color: #111;
+                }
+            }
+            .items{
+                .background1{
+                    position: absolute;
+                    background: url(../img/back3.jpg) no-repeat;
+                    width: 2560px;
+                    height: 1490px;
+                    left: -17%;
+                    top: 0;
+                    background-size: cover;
+                    z-index: -2;
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        background: rgba(255, 255, 255, .9);
+                        width: 3000px;
+                        height: 2000px;
+                        z-index: -1;
+                    }
+                }
+                .item{
+                    margin: 0 0 0 30%;
+                    a{
+                        display: block;
+                    }
+                }
+                .item1{
+                    margin: 0;
+                    position: absolute;
+                    top: 65%;
+                    left: -17%;
+                    width: 100%;
+                    a{
+                        margin: 0;
+                        position: relative;
+                        .objWrap1{
+                            width: 76%;
+                            height: 438px;
+                            overflow: hidden;
+                            .obj{
+                                width: 100%;
+                                height: 100%;
+                                background-image: url(../img/content2.jpg);
+                                background-size: cover;
+                            }
+                        }
+                        .objTextWrap{
+                            width: 500px;
+                            height: 330px;
+                            position: absolute;
+                            top: 55%;
+                            left: 76%;
+                            transform: translate(-50%, -50%);
+                            padding: 40px 40px 0 20px;
+                            background: rgba(255, 255, 255, .9);
+                            border: 1px solid #111;
+                            box-sizing: border-box;
+                            box-shadow: 3px 5px 10px -3px rgba(0, 0, 0, 30%);
+                            .con4_txt{
+                                display: block;
+                                color: #364497; //컬러 변경
+                                font-weight: 900;
+                                font-size: 32px;
+                                text-align: right;
+                                span{
+                                    display: block;
+                                    color: #111; //컬러변경
+                                    font-weight: 500;
+                                }
+                            }
+                            .con4_stxt{
+                                text-align: right;
+                                display: block;
+                                margin-top: 30px;
+                            }
+                        }
+                    }
+                }
+                .item2{
+                    width: 100%;
+                    a{
+                        position: relative;
+                        .objWrap2{
+                            margin: 35px 0 0 200px;
+                            width: 80%;
+                            height: 438px;
+                            overflow: hidden;
+                            .obj{
+                                width: 100%;
+                                height: 100%;
+                                background-image: url(../img/content2-1.jpg);
+                                background-size: cover;
+                            }
+                        }
+                        .objTextWrap{
+                            width: 500px;
+                            height: 330px;
+                            position: absolute;
+                            top: 80px;
+                            left: -60px;
+                            padding: 50px 20px 0 40px;
+                            text-align: left;
+                            background: rgba(255, 255, 255, .9);
+                            border: 1px solid #111;
+                            box-sizing: border-box;
+                            box-shadow: 3px 5px 10px -3px rgba(0, 0, 0, 30%);
+                            .con4_txt{
+                                display: block;
+                                color: #364497; //컬러 변경
+                                font-weight: 900;
+                                font-size: 32px;
+                                text-align: left;
+                                span{
+                                    display: block;
+                                    color: #111; //컬러변경
+                                    font-weight: 500;
+                                }
+                            }
+                            .con4_stxt{
+                                text-align: left;
+                                display: block;
+                                margin-top: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .content3{
+        width: 100%;
+        padding-top: 60px;
+        .innerBox{
+            max-width: 100%;
+            background: url(../img/content3BG.png) no-repeat;
+            background-size: auto;
+            background-position-y: -365px;
+            background-position-x: center;
+            position: relative;
+            box-sizing: border-box;
+            &::after{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                background: rgba(240, 239, 239, 0.7);
+            }
+
+            .HBox{
+                position: relative;
+                z-index: 1;
+                max-width: 1260px;
+                margin-left: auto;
+                margin-right: auto;
+                padding-top: 100px;
+                padding-bottom: 100px;
+                .con3_Ttxt{
+                    font-size: 40px;
+                    font-weight: 900;
+                    line-height: .9em;
+                    text-align: center;
+                }
+                .con3_Stxt{
+                    font-size: 25px;
+                    margin-top: 50px;
+                    line-height: 1.6em;
+                    margin-bottom: 50px;
+                    text-align: center;
+                }
+                .con3_list{
+                    margin-top: 80px;
+                    display: flex;
+                    justify-content: space-around;
+                    
+                    a{
+                        display: block;
+                        margin-right: 45px;
+                        padding: 55px 20px 85px 20px;
+                        position: relative;
+                        
+                        &::before{
+                            content: "";
+                            width: 40px;
+                            height: 3px;
+                            background: #000;
+                            position: absolute;
+                            top: 0;
+                            left: 20px;
+                            transition: .5s;
+                        }
+                        &:hover{
+                            &::before{
+                                width: 70px;
+                                background: #364497;
+                            }
+                            .list_date{
+                                border-bottom: 3px solid #364497;
+                                padding-bottom: 10px;
+                                
+                            }
+                        }
+                        .list_tit{
+                            font-size: 20px;
+                            font-weight: 500;
+                            white-space: normal;
+                            line-height: 1.4em;
+                            height: 4.2em;
+                            word-wrap: break-word;
+                            overflow: hidden;
+                        }
+                        .list_date{
+                            font-size: 15px;
+                            line-height: 1em;
+                            margin-top: 50px;
+                            font-weight: 300;
+                            transition: .5s;
+                            padding-bottom: 20px;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    .content4{
+        width: 100%;
+        .innerBox{
+            .HBox{
+                max-width: 1260px;
+                margin-left: auto;
+                margin-right: auto;
+                box-sizing: border-box;
+                text-align: center;
+                padding-top: 100px;
+                padding-bottom: 100px;
+                .con4_Ttxt{
+                    font-size: 40px;
+                    font-weight: 900;
+                    line-height: .9em;
+                }
+                .con4_Stit{
+                    font-size: 30px;
+                    letter-spacing: -.025em;
+                    margin-top: 40px;
+                    font-weight: 500;
+                }
+                .con4_Stxt{
+                    font-size: 20px;
+                    letter-spacing: -.025em;
+                    margin-top: 18px;
+                }
+                .con4_list{
+                    padding: 80px 0 40px;
+                    ul{
+                        display: flex;
+                        flex-flow: row;
+                        flex-wrap: wrap;
+                        li{
+                            display: inline-block;
+                            width: 25%;
+                            vertical-align: top;
+                            transition: .5s;
+                            a{
+                                display: block;
+                                box-sizing: border-box;
+                                position: relative;
+                                padding: 17px 20px 0 99px;
+                                .icon{
+                                    display: block;
+                                    position: absolute;
+                                    width: 60px;
+                                    height: 60px;
+                                    left: 25px;
+                                    top: 20px;
+                                }
+                                .icon_1{
+                                    background: url(../img/service_icon_1.png) no-repeat;
+                                    width: 60px;
+                                    height: 60px;
+                                    background-size: cover;
+                                }
+                                .icon_2{
+                                    background: url(../img/service_icon_2.png) no-repeat;
+                                    width: 60px;
+                                    height: 60px;
+                                    background-size: cover;
+                                }
+                                .icon_3{
+                                    background: url(../img/service_icon_3.png) no-repeat;
+                                    width: 60px;
+                                    height: 60px;
+                                    background-size: cover;
+                                }
+                                .icon_4{
+                                    background: url(../img/service_icon_4.png) no-repeat;
+                                    width: 60px;
+                                    height: 60px;
+                                    background-size: cover;
+                                }
+                                .Ttxt{
+                                    display: block;
+                                    font-size: 20px;
+                                    letter-spacing: -.025em;
+                                    line-height: 1.2;
+                                    color: #111;
+                                    font-weight: 300;
+                                }
+                                .Stxt{
+                                    display: block;
+                                    font-size: 15px;
+                                    line-height: 1.5625;
+                                    letter-spacing: -.025em;
+                                    color: #878787;
+                                    margin: 23px 0 0;
+                                }
+                            }
+                            &:hover{
+                                background: #364497;
+                                a{
+                                    .icon{
+                                        filter: brightness(0) invert(1);
+                                    }
+                                    .Ttxt{
+                                        color: #fff;
+                                    }
+                                    .Stxt{
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .con4_imgWrap{
+                    width: 100%;
+                    .con4_img{
+                        width: 1740px;
+                        margin-left: -235px;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}

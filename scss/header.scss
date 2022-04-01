@@ -1,0 +1,283 @@
+header{
+    position: fixed;
+    z-index: 1000;
+    line-height: 1;
+    width: 100%;
+    height: 80px;
+
+    .headerInnerBox{
+        position: relative;
+        height: 80px;
+        width: auto;
+        max-width: 1920px;
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+
+        .headerBox{
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            height: 0;
+            z-index: 10;
+
+            .header_logo{
+                display: block;
+                position: absolute;
+                left: 90px;
+                top: 26px;
+                font-size: 25px;
+                width: 180px;
+                height: 90px;
+                z-index: 10;
+                text-align: left;
+                transition: all .3s ease;
+                color: #eee;
+
+                .logo_W{
+                    opacity: 1;
+                    width: 100%;
+                }
+                .logo_B{
+                    opacity: 0;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                }
+            }
+            nav{
+                .header_nav{
+                    li{
+                        display: inline-block;
+                        vertical-align: top;
+                        width: auto;
+
+                        &:hover{
+                            //hover 색상변경
+                            a{
+                                span{
+                                    color: #364497;
+                                }
+                            }
+                        }
+                        a{
+                            display: block;
+                            position: relative;
+                            height: auto;
+                            text-align: center;
+                            padding: 5px 50px;
+                            z-index: 1;
+
+                            span{
+                                display: inline-block;
+                                position: relative;
+                                font-size: 18px;
+                                color: #eee;
+                                text-align: center;
+                                padding: 30px 0;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                }
+            }
+            .contactUs{
+                position: absolute;
+                top: 31px;
+                right: 90px;
+                font-size: 18px;
+                padding: 4px 0;
+
+                a{
+                    color: #eee;
+                    font-weight: 100;
+                }
+                &:hover{
+                    //hover 색상변경
+                    a{
+                        color: #364497;
+                    }
+                }
+            }
+            .hamBtn{
+                position: absolute;
+                width: 30px;
+                right: 38px;
+                top: 25px;
+                display: block;
+                cursor: pointer;
+
+                span{
+                    display: none;
+                    width: 100%;
+                    height: 2px;
+                    background: #111;
+                    transition: all .3s;
+                    position: relative;
+                    margin-top: 6px;
+                }
+
+                /***애니메이션 ***/
+                &.active{
+                    span:nth-child(1){
+                        animation: ease .7s top forwards;
+                    }
+                    span:nth-child(2){
+                        animation: ease .7s scaled forwards;
+                    }
+                    span:nth-child(3){
+                        animation: ease .7s bottom forwards;
+                    }
+                }
+                &{
+                    span:nth-child(1){
+                        animation: ease .7s top-2 forwards;
+                    }
+                    span:nth-child(2){
+                        animation: ease .7s scaled-2 forwards
+                    }
+                    span:nth-child(3){
+                        animation: ease .7s bottom-2 forwards;
+                    }
+                }
+                @keyframes top {
+                    0% {
+                        top: 0;
+                        -webkit-transform: rotate(0);
+                        transform: rotate(0);
+                    }
+                
+                    50% {
+                        top: 11px;
+                        -webkit-transform: rotate(0);
+                        transform: rotate(0);
+                    }
+                
+                    100% {
+                        top: 11px;
+                        -webkit-transform: rotate(45deg);
+                        transform: rotate(45deg);
+                    } 
+                }
+                @keyframes top-2 {
+                    0% {
+                    top: 11px;
+                    -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                    }
+                
+                    50% {
+                    top: 11px;
+                    -webkit-transform: rotate(0deg);
+                    transform: rotate(0deg);
+                    }
+                
+                    100% {
+                    top: 0;
+                    -webkit-transform: rotate(0deg);
+                    transform: rotate(0deg);
+                    }
+                }
+                @keyframes bottom {
+                    0% {
+                    bottom: 0;
+                    -webkit-transform: rotate(0);
+                    transform: rotate(0);
+                    }
+                
+                    50% {
+                    bottom: 5px;
+                    -webkit-transform: rotate(0);
+                    transform: rotate(0);
+                    }
+                
+                    100% {
+                    bottom: 5px;
+                    -webkit-transform: rotate(135deg);
+                    transform: rotate(135deg);
+                    }
+                }
+                @keyframes bottom-2 {
+                    0% {
+                    bottom: 5px;
+                    -webkit-transform: rotate(135deg);
+                    transform: rotate(135deg);
+                    }
+                
+                    50% {
+                    bottom: 5px;
+                    -webkit-transform: rotate(0);
+                    transform: rotate(0);
+                    }
+                
+                    100% {
+                    bottom: 0;
+                    -webkit-transform: rotate(0);
+                    transform: rotate(0);
+                    }
+                }
+                @keyframes scaled {
+                    50% {
+                    -webkit-transform: scale(0);
+                    transform: scale(0);
+                    }
+                
+                    100% {
+                    -webkit-transform: scale(0);
+                    transform: scale(0);
+                    }
+                }
+                @keyframes scaled-2 {
+                    0% {
+                    -webkit-transform: scale(0);
+                    transform: scale(0);
+                    }
+                
+                    50% {
+                    -webkit-transform: scale(0);
+                    transform: scale(0);
+                    }
+                
+                    100% {
+                    -webkit-transform: scale(1);
+                    transform: scale(1);
+                    }
+                }
+            }
+        }
+    }
+}
+.headerActive{
+    background-color: #fff;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+    border-bottom: 1px solid #364497;
+    .headerInnerBox{
+        .headerBox{
+            .header_logo{
+                .logo_W{
+                    opacity: 0;
+                }
+                .logo_B{
+                    opacity: 1;
+                }
+            }
+            .header_nav{
+                li{
+                    a{
+                        span{
+                            color: #111;
+                        }
+                    }
+                }
+            }
+            .contactUs{
+                a{
+                    color: #111;
+                }
+            }
+        }
+    }
+}

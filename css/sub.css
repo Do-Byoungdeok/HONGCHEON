@@ -1,0 +1,58 @@
+header {
+  background-color: #fff;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+  border-bottom: 1px solid #364497;
+}
+header .headerInnerBox .headerBox .header_logo .logo_W {
+  opacity: 0;
+}
+header .headerInnerBox .headerBox .header_logo .logo_B {
+  opacity: 1;
+}
+header .headerInnerBox .headerBox nav .header_nav li a span {
+  color: #111;
+}
+header .headerInnerBox .headerBox .contactUs a {
+  color: #111;
+}
+
+.container .innerBox {
+  max-width: 1920px;
+}
+.container .innerBox .content .topBanner {
+  width: 100%;
+  height: 200px;
+  background: #111;
+  position: relative;
+}
+.container .innerBox .content .topBanner .textBox {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.container .innerBox .content .topBanner .textBox .t1 {
+  color: #fff;
+}
+.container .innerBox .content .con {
+  height: 65vh;
+  text-align: center;
+  position: relative;
+}
+.container .innerBox .content .con .txBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.container .innerBox .content .con .txBox .tx1 {
+  margin-bottom: 20px;
+}
+.container .innerBox .content .con .txBox .tx1 strong {
+  color: #364497;
+}

@@ -1,0 +1,74 @@
+header{
+    background-color: #fff;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+    border-bottom: 1px solid #364497;
+    .headerInnerBox{
+        .headerBox{
+            .header_logo{
+                .logo_W{
+                    opacity: 0;
+                }
+                .logo_B{
+                    opacity: 1;
+                }
+            }
+            nav{
+                .header_nav{
+                    li{
+                        a{
+                            span{
+                                color: #111;
+                            }
+                        }
+                    }
+                }
+            }
+            .contactUs{
+                a{
+                    color: #111;
+                }
+            }
+        }
+    }
+}
+
+.container{
+    .innerBox{
+        max-width: 1920px;
+        .content{
+            .topBanner{
+                width: 100%;
+                height: 200px;
+                background: #111;
+                position: relative;
+                .textBox{
+                    position: absolute;
+                    top: 65%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    .t1{
+                        color: #fff;
+                    }
+                }
+            }
+            .con{
+                height: 65vh;
+                text-align: center;
+                position: relative;
+                .txBox{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    .tx1{
+                        strong{
+                            color: #364497;
+                        }
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

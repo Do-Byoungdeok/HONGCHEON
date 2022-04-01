@@ -1,0 +1,617 @@
+//반응형
+$mobile1200: 1200px;
+$mobile767: 767px;
+$mobile370: 370px;
+
+@mixin respond($mobile){
+    @media screen and (max-width:$mobile) {
+        @content;
+    }
+}
+
+/* 공통 */
+$mainColor:#364497;
+$title767:20px;
+$subTitle767:18px;
+
+
+
+@include respond($mobile1200){
+    header{
+        height: 70px;
+        background-color: rgba(255, 255, 255, 0.9);;
+        transition-duration: .5s;
+        transition-timing-function: ease;
+        border-bottom: 1px solid #364497;
+
+
+        .headerInnerBox{
+            .headerBox{
+                .header_logo{
+                    top: 15px;
+                    left: 15px;
+                    .logo_W{
+                        opacity: 0;
+                    }
+                    .logo_B{
+                        opacity: 1;
+                    }
+                }
+                nav{
+                    position: fixed;
+                    top: 0;
+                    right: -300px;
+                    overflow: auto;
+                    width: 300px;
+                    height: 100%;
+                    padding: 50px 20px;
+                    box-sizing: border-box;
+                    transition: right .3s ease-in-out;
+                    background-color: rgba(255, 255, 255, 0.9);;
+                    
+                    .header_nav{
+                        li{
+                            a{
+                                span{
+                                    color: #111;
+                                }
+                            }
+                        }
+                    }
+                }
+                .hamBtn{
+                    z-index: 1000;
+                    right: 20px;
+                    span{
+                        display: block;
+                    }
+                }
+                .contactUs{
+                    display: none;
+                }
+            }
+        }
+    }
+    .container{
+        .mainBanner{
+            .innerBox{
+                .banner{
+
+                    .item{
+                        .textBox{
+                            .bar{
+                                height: 80px;
+                            }
+                            .txt1{
+                                font-size: 30px;
+                            }
+                            .txt2{
+                                font-size: 35px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include respond($mobile767){
+    header{
+        height: 50px;
+        .headerInnerBox{
+            .headerBox{
+                .header_logo{
+                    top: 8px;
+                }
+                .hamBtn{
+                    top: 13px;
+                }
+            }
+        }
+    }
+    .container{
+        .mainBanner{
+            .innerBox{
+                .banner{
+                    .item{
+                        .textBox{
+                            .bar{
+                                height: 50px;
+                            }
+                            .txt1{
+                                font-size: 20px;
+                            }
+                            .txt2{
+                                font-size: 23px;
+                            }
+                        }
+                    }
+                    .item3{
+                        .textBox{
+                            .txt2{
+                                margin-left: -30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .content1{
+            .innerBox{
+                .HBox{
+                    padding-top: 50px;
+                    padding-bottom: 0;
+                    .Ttxt{
+                        font-size: 20px;
+                    }
+                    .Stxt{
+                        font-size: 17px;
+                    }
+                    .listBox{
+                        margin: 0;
+                        margin-top: 50px;
+                        height: 334px;
+                        a{
+                            padding: 0;
+                            height: 65%;
+                            .contxt1{
+                                .contxt_icon{
+                                    background-size: 70%;
+                                    background-position: 50%
+                                }
+                                p{
+                                    font-size: 17px;
+                                    margin-top: 0;
+                                }
+                            }
+                            .contxt2{
+                                font-size: 14px;
+                                height: 7.8em;
+                                margin-top: 10px;
+                            }
+                            &:hover{
+                                .contxt1{
+                                    p{
+
+                                    }
+                                    .contxt_icon{
+
+                                    }
+                                }
+                                .contxt2{
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .content2{
+            .innerBox{
+                padding-bottom: 600px;
+                .textBox{
+                    .mText{
+                        font-size: 35px;
+                    }
+                    .sText{
+                        font-size: 20px;
+                    }
+                }
+                .items{
+                    .background1{
+                        height: 1000px;
+                    }
+                    .item{
+                        a{
+                            .objTextWrap{
+                                width: 440px;
+                                height: 219px;
+                                top: 25%;
+                                .con4_txt{
+                                    font-size: 25px;
+                                }
+                                .con4_stxt{
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+                    .item1{
+                        top: 40%;
+                        a{
+                            .objWrap1{
+                                .obj{
+                                    height: 50%;
+                                }
+                            }
+                            .objTextWrap{
+                                left: 59%;
+                            }
+                        }
+                    }
+                    .item2{
+                        a{
+                            .objWrap2{
+                                .obj{
+                                    height: 50%;
+                                }
+                            }
+                            .objTextWrap{
+                                top: 0;
+                                left: -113px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .content3{
+            padding-top: 0;
+            .innerBox{
+                .HBox{
+                    .con3_Ttxt{
+                        font-size: 25px;
+                    }
+                    .con3_Stxt{
+                        font-size: 18px;
+                    }
+                    .con3_list{
+                        a{
+                            margin-right: 25px;
+                            .list_tit{
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .content4{
+            .innerBox{
+                .HBox{
+                    .con4_Ttxt{
+                        font-size: 25px;
+                    }
+                    .con4_Stit{
+                        font-size: 20px;
+                    }
+                    .con4_Stxt{
+                        font-size: 16px;
+                    }
+                    .con4_list{
+                        ul{
+                            li{
+                                a{
+                                    padding: 80px 0px 0 10px;
+                                    .icon{
+                                        left: 65px;
+                                        top: 6px;
+                                    }
+                                    .Ttxt{
+                                        font-size: 16px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .con4_imgWrap{
+                        width: 100%;
+                        .con4_img{
+                            margin-left: -444px;
+                            img{
+                                width: 50%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        .footerInnerBox{
+            .footerTop{
+                .topBox{
+                    ul{
+                        padding: 26px 80px 27px 0;
+                        li{
+                            a{
+                                font-size: 20px;
+                                span{
+                                    font-size: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@include respond($mobile370){
+    .container{
+        .mainBanner{
+            margin-top: 50px;
+            .innerBox{
+                .banner{
+                    .item{
+                        .textBox{
+                            .bar{
+                                height: 0;
+                            }
+                            .txt1{
+                                font-size: 18px;
+                            }
+                            .txt2{
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                    .item3{
+                        .textBox{
+                            .txt2{
+                                width: 100%;
+                                margin-left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .content1{
+            .innerBox{
+                .HBox{
+                    padding-top: 50px;
+                    padding-bottom: 0;
+                    .Ttxt{
+                        font-size: 18px;
+                    }
+                    .Stxt{
+                        font-size: 15px;
+                    }
+                    .listBox{
+                        margin: 0;
+                        margin-top: 50px;
+                        height: 334px;
+                        a{
+                            padding: 0;
+                            height: 95%;
+                            .contxt1{
+                                .contxt_icon{
+                                    background-size: 70%;
+                                    background-position: 50%
+                                }
+                                p{
+                                    font-size: 16px;
+                                    margin-top: 0;
+                                }
+                            }
+                            .contxt2{
+                                font-size: 14px;
+                                height: 10em;
+                                margin-top: 10px;
+                            }
+                            &:hover{
+                                .contxt1{
+                                    p{
+
+                                    }
+                                    .contxt_icon{
+
+                                    }
+                                }
+                                .contxt2{
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .content2{
+            .innerBox{
+                padding-bottom: 250px;
+                .textBox{
+                    .mText{
+                        font-size: 18px;
+                    }
+                    .sText{
+                        font-size: 15px;
+                    }
+                }
+                .items{
+                    .background1{
+                        height: 800px;
+                    }
+                    .item{
+                        a{
+                            .objTextWrap{
+                                width: 250px;
+                                height: 219px;
+                                top: 25%;
+                                .con4_txt{
+                                    font-size: 25px;
+                                }
+                                .con4_stxt{
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+                    .item1{
+                        top: 55%;
+                        a{
+                            .objWrap1{
+                                width: 120%;
+                                .obj{
+                                    height: 50%;
+                                }
+                            }
+                            .objTextWrap{
+                                left: 68%;
+                                padding: 0;
+                                padding-top: 20px;
+                                .con4_txt{
+                                    text-align: center;
+                                }
+                                .con4_stxt{
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                    .item2{
+                        a{
+                            .objWrap2{
+                                margin: 35px 0 0 -110px;
+                                width: 100%;
+                                .obj{
+                                    height: 50%;
+                                }
+                            }
+                            .objTextWrap{
+                                top: 0;
+                                padding: 0;
+                                padding-top: 20px;
+                                .con4_txt{
+                                    text-align: center;
+                                }
+                                .con4_stxt{
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .content3{
+            padding-top: 0;
+            .innerBox{
+                background-position-y: -240px;
+                .HBox{
+                    .con3_Ttxt{
+                        font-size: 25px;
+                    }
+                    .con3_Stxt{
+                        font-size: 18px;
+                    }
+                    .con3_list{
+                        flex-direction: column;
+                        a{
+                            margin-right: 0;
+                            padding: 20px 20px 30px 0;
+                            .list_tit{
+                                font-size: 16px;
+                                margin-left: 20px;
+                                height: 2.2em;
+                            }
+                            .list_date{
+                                margin-left: 20px;
+                                margin-top: 0;
+                            }
+                            img{
+                                margin-left: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .content4{
+            .innerBox{
+                .HBox{
+                    .con4_Ttxt{
+                        font-size: 25px;
+                    }
+                    .con4_Stit{
+                        font-size: 18px;
+                    }
+                    .con4_Stxt{
+                        font-size: 15px;
+                        width: 85%;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                    .con4_list{
+                        padding: 50px 0 0;
+                        ul{
+                            li{
+                                width: 50%;
+                                a{
+                                    padding: 80px 10px 10px 0px;
+                                    .icon{
+                                        left: 50%;
+                                        transform: translateX(-50%);
+                                        top: 6px;
+                                        background-size: 60%;
+                                        background-position: 50%;
+                                    }
+                                    .Ttxt{
+                                        font-size: 16px;
+                                    }
+                                    .Stxt{
+                                        margin: 24px -1px 2px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .con4_imgWrap{
+                        width: 100%;
+                        .con4_img{
+                            margin-left: -780px;
+                            img{
+                                width: 35%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        .footerInnerBox{
+            .footerTop{
+                .topBox{
+                    ul{
+                        padding: 26px 80px 27px 0;
+                        li{
+                            padding: 20px 30px 0 0;
+                            a{
+                                font-size: 20px;
+                                span{
+                                    font-size: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .footBottom{
+                .bottomBox{
+                    dl{
+                        padding: 0 0 0 70px;
+                        dt{
+                        }
+                        dd{
+                            span{
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }  
+}
